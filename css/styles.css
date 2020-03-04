@@ -1,0 +1,57 @@
+/*re-usable styling*/
+
+.border {
+    border-radius: 4px;  }
+
+.mar_pad {
+    margin: 20px;
+    padding: 20px;  }
+
+.heading_color {
+    background-color: rgba(75, 153, 255, 0.876);
+    color: rgb(230, 230, 230);
+    text-align: center;  }
+
+.font_large{ 
+    font-size: 22px;
+    font-family: 'Nunito', sans-serif;  }
+
+.font_larger {
+    font-size: 32px;
+    font-family: 'Nunito', sans-serif;  }
+
+.back_color{
+    background-image: url("../images/codeBacknew.png");
+    background-position: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(31, 30, 30, 0.65);
+    color: rgb(75, 153, 255);  }
+
+.animate_block {position: relative;
+    -webkit-animation-name: animate_block;
+    -webkit-animation-duration: 1.4s;
+    animation-name: animate_block;
+    animation-duration: 1.4s}
+
+    @-webkit-keyframes animate_block {
+        from { left:-150px; 
+                opacity:0 } 
+        to { left:0px;
+                opacity:1 }  }
+
+    @keyframes animate_block { 
+    from{ left:-150px;
+            opacity:0 } 
+    to{ left:0;
+        opacity:1 }  }
+
+/* individual styling */
+
+body{
+    background-color: rgb(202, 224, 230);  }
+
+input[type=text] {
+    width: 40vw;
+    color: rgb(60, 145, 255); 
+    border-color: rgba(30, 138, 210, 0.63);
+    background-color: rgba(255, 255, 255, 0.7); }
