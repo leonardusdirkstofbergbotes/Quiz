@@ -7,9 +7,20 @@
     margin: 20px;
     padding: 20px;  }
 
+.white{
+    color: rgb(230, 230, 230);
+} 
+
+
+.orange {
+    color: rgb(212, 144, 55);
+}
+.blue{
+    color: rgb(75, 153, 255);
+}
+
 .heading_color {
     background-color: rgba(75, 153, 255, 0.876);
-    color: rgb(230, 230, 230);
     text-align: center;  }
 
 .font_large{ 
@@ -21,11 +32,13 @@
     font-family: 'Nunito', sans-serif;  }
 
 .back_color{
-    background-image: url("../images/codeBacknew.png");
+    background-image: url("../images/woman3.png");
     background-position: no-repeat;
     background-size: 100% 100%;
-    background-color: rgba(31, 30, 30, 0.65);
-    color: rgb(75, 153, 255);  }
+    background-color: rgba(31, 30, 30, 0.65);  }
+
+.back_colorB {
+    background-image: url("../images/codeBacknew2.png") !important;  }
 
 .animate_block {position: relative;
     -webkit-animation-name: animate_block;
@@ -51,7 +64,20 @@ body{
     background-color: rgb(202, 224, 230);  }
 
 input[type=text] {
-    width: 40vw;
-    color: rgb(60, 145, 255); 
+    width: 250px;
     border-color: rgba(30, 138, 210, 0.63);
     background-color: rgba(255, 255, 255, 0.7); }
+
+.enlarge {
+    animation-name: enlarge;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  }    
+        
+    @keyframes enlarge {    
+        0% ,100% {transform: scale(1.8);
+                    opacity: 0.8;}
+
+        50% { transform: scale(2);
+                opacity: 1;}
+     }
+
