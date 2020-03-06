@@ -81,3 +81,19 @@ input[type=text] {
                 opacity: 1;}
      }
 
+.hover:hover {
+    cursor: pointer;
+    animation-fill-mode: forwards;
+    animation-name: change_color;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;  }
+
+        @keyframes change_color {
+            100% {color: rgb(212, 144, 55); }
+        }
+   /* input[type="radio"]:checked {
+        box-shadow: 0 0 0 3px orange;
+        } */
+
+:checked{ 
+    box-shadow: 0 0 2px 3px rgb(212, 144, 55);  } 

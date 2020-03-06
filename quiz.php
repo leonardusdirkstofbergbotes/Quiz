@@ -29,7 +29,7 @@
                     echo "<fieldset class=\"border mar_pad back_color blue back_colorB rotate \" id=\"$number\">";
                     echo "<legend class=\"heading_color white border mar_pad font_larger\">$questionkey</legend><br>";
                         foreach($Options_array as $key => $Boolean_value) {
-                        echo "<label class=\"font_larger blue\"><input type=\"radio\" class=\"mar_pad border enlarge\" value=\"$Boolean_value\" name=\"$questionkey\" required>$key</label><br>";
+                        echo "<label class=\"font_larger blue hover\"><input type=\"radio\" class=\"mar_pad border enlarge\" value=\"$Boolean_value\" name=\"$questionkey\" required>$key</label><br>";
                     }
                     echo "</fieldset>";
                     $number++;
@@ -39,5 +39,18 @@
         <button class="font_larger heading_color border mar_pad white" type="submit"> Submit </button>
     </form>
 
+    <script>
+        $(document).ready(function() {
+            
+            $("fieldset").css("opacity", "0.5");
+                //change the opacity when hovering over the fieldset
+            $("fieldset").mouseenter(function() {
+                $(this).animate({
+                        opacity: "1"
+                    }, 700)
+            });
+        });
+       
+    </script>
 </body>
 </html>
