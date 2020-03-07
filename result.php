@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="css/styles01.css">
 </head>
 <body>
+<?php 
+    $score=0;
+    foreach ($_POST as $userInput) {
+        if ($userInput == 'd') {
+        $score++;
+        }
+    };
+?>
 
 
 </body>
