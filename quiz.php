@@ -1,8 +1,7 @@
 <?php 
     session_start();
-
-    $username = $_POST["name"];
-    $_SESSION['username'] = $username; //to be used on other pages
+        $username = $_POST["name"];
+        $_SESSION['username'] = $username; //name to be used on other pages
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +18,15 @@
 </head>
 <body>
 
-    <h1 class="mar_pad font_larger blue" id="greeting">Hello <em class="orange"><?php echo $username ?></em></h1>
+    <h1 class="mar_pad font_larger blue" id="greeting">Hello <em class="orange"><?php if (isset($_POST["name"])) {echo $_SESSION['username'];} ?></em></h1>
 
     <form method="post" action="result.php">
         <?php  
-        include 'include/array.php';
+        include 'include/array.php'; //my questions array
             $number = 1;
                 foreach ($master as $questionkey => $Options_array) {
                     echo "<fieldset class=\"border mar_pad back_color blue back_colorB rotate \" id=\"$number\">";
-                    echo "<legend class=\"back_blue white border mar_pad font_larger font_large\">$questionkey</legend><br>";
+                    echo "<legend class=\"back_blue white border mar_pad font_larger font_large\">$questionkey</legend><br>"; //each questions heading block
                         foreach($Options_array as $key => $Boolean_value) {
                         echo "<label class=\"font_larger blue hover small\"><input type=\"radio\" class=\"mar_pad border enlarge\" value=\"$Boolean_value\" name=\"$questionkey\" required>$key</label><br>";
                     }

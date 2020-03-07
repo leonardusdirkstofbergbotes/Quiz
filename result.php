@@ -13,6 +13,7 @@
 </head>
 <body>
 <?php 
+        //tally the score from each correct answer
     $score=0;
     foreach ($_POST as $userInput) {
         if ($userInput == 'd') {
@@ -27,8 +28,9 @@
 <!-- <p class="mar_pad font_larger white growing"><br><br> Well done <?php echo $_SESSION['username'] ?> You scored <br><br> <?php echo $score ?> <br>--<br>20</p>-->
         
         <?php
+            //different result message for different cases
         switch ($score) {
-            case $score < 9:
+            case $score < 10:
                 $var = "thumbsDown.png";
                 $sound = "sad.mp3";
                 echo "<h2 class=\"mar_pad font_larger blue\">You will need some more practice $name<h2>";
@@ -50,24 +52,33 @@
             break;
         }
 
+            //an appropaite image and audio for the different cases 
     echo "<img class=\"image\" id=\"award\" src=\"images/$var\"><br>";
+    echo "<audio id=\"my_audio\" src=\"sound/$sound\"></audio>";
     echo "<p class=\"mar_pad font_larger white\">you scored <em class=\"orange\">$score </em> out of 20</p>";
     ?>
     <img class="top down" src="images/confetti.png"> 
 
-    <?php echo "<audio id=\"my_audio\" src=\"sound/$sound\"></audio>" ?>
 </fieldset>
 
+<?php 
+    if ($score < 10) {
+        echo "<a href=\"quiz.php\"><button class=\"mar_pad back_orange font_larger border white\">Try again</button></a>";
+    }
+?>
+
 <script>
+        //lower the volume of the audio file
     $('#my_audio').prop("volume", 0.2);
 
+        //let the audio play ONLY once the page has been FULLY loaded
     $(document).ready(function() {
         $("#my_audio").get(0).play();
     });
 
 </script>
 
-<?php session_destroy() ?>
+
 
 </body>
 </html>

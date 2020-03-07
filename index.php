@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz HomePage</title>
 
+    <!-- The font that i use throughout the pages -->
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
@@ -20,7 +22,9 @@
         </fieldset>
       <button class="font_larger white back_orange border mar_pad animate_block attention" type="submit">Start Quiz</button>
     </form>
+
    <script>
+            //expand the name field if you hover over it
        $("input[type=text]").mouseover(function(){
     $(this).animate({
         width: "600"
