@@ -113,7 +113,7 @@
                                     'Depends on the time of day' => 'c',
                                     'Yes' => 'a',
                                     'No' => 'd'),
-                            '20 What does CSS short for?' 
+                            '20 What is CSS short for?' 
                                 => array(
                                     'Creative Style Sheets' => 'c',
                                     'Cascading Sheet Styles' => 'b',

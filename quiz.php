@@ -27,16 +27,16 @@
             $number = 1;
                 foreach ($master as $questionkey => $Options_array) {
                     echo "<fieldset class=\"border mar_pad back_color blue back_colorB rotate \" id=\"$number\">";
-                    echo "<legend class=\"heading_color white border mar_pad font_larger\">$questionkey</legend><br>";
+                    echo "<legend class=\"back_blue white border mar_pad font_larger font_large\">$questionkey</legend><br>";
                         foreach($Options_array as $key => $Boolean_value) {
-                        echo "<label class=\"font_larger blue hover\"><input type=\"radio\" class=\"mar_pad border enlarge\" value=\"$Boolean_value\" name=\"$questionkey\" required>$key</label><br>";
+                        echo "<label class=\"font_larger blue hover small\"><input type=\"radio\" class=\"mar_pad border enlarge\" value=\"$Boolean_value\" name=\"$questionkey\" required>$key</label><br>";
                     }
                     echo "</fieldset>";
                     $number++;
                 }
         ?>
 
-        <button class="font_larger heading_color border mar_pad white" type="submit"> Submit </button>
+        <button class="font_larger back_orange border mar_pad white" type="submit"> Submit </button>
     </form>
 
     <script>
