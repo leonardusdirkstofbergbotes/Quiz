@@ -15,7 +15,7 @@
                 <p class="font_large white mar_pad animate_block">So you think you got what it takes to <strong>ACE</strong> this simple HTML & CSS quiz? <br>
                     <pre class="font_larger white mar_pad animate_block">
                     If (feeling lucky) {</pre> </p><br>
-                        <input class="font_large blue mar_pad border animate_block" type="text" name="name" placeholder="Enter your Name"><br>
+                        <input class="font_large glow_orange blue mar_pad border animate_block" type="text" name="name" placeholder="Enter your Name"><br>
                             <p class="mar_pad white font_larger animate_block"> Once your ready press the button and start the quiz</p>
         </fieldset>
       <button class="font_larger white back_orange border mar_pad animate_block attention" type="submit">Start Quiz</button>

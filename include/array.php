@@ -52,7 +52,7 @@
                                     'In an external css file' => 'b',
                                     'You dont need a style tag to style an element' => 'c',
                                     'Next to the element that you want to style' => 'a',
-                                    'Just before you close the <head> tag' => 'd'),
+                                    'Just before you close the head tag' => 'd'),
                             '10 How does one write a single-line comment in CSS?' 
                                 => array(
                                     '/*comment*' => 'c',

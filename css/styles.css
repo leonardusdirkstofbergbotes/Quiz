@@ -65,7 +65,7 @@
 /* individual styling */
 
 body{
-    background-color: rgb(202, 224, 230);  }
+    background-color: rgb(202, 230, 229);  }
 
 input[type=text] {
     width: 250px;
@@ -84,6 +84,20 @@ input[type=text] {
         50% { transform: scale(2);
                 opacity: 1;}
      }
+
+ .glow_orange {
+     animation-name: glow_orange;
+     animation-duration: 2s;
+     animation-iteration-count: infinite;
+ }    
+
+ @keyframes glow_orange {
+    0%, 100% {-webkit-box-shadow: 0px 0px 15px 5px rgba(255,146,44,0.1); 
+        box-shadow: 0px 0px 15px 5px rgba(255,146,44,0.1);}
+
+     50% {-webkit-box-shadow: 0px 0px 15px 5px rgba(255,146,44,0.97); 
+        box-shadow: 0px 0px 15px 5px rgba(255,146,44,0.97);}
+ }
 
 .hover:hover {
     cursor: pointer;
