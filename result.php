@@ -30,6 +30,11 @@
         <?php
             //different result message for different cases
         switch ($score) {
+            case 0:
+                $var = "thumbsDown.png";
+                $sound = "sad.mp3";
+                echo "<h2 class=\"mar_pad font_larger blue\">You will need some more practice $name<h2>";
+            break;
             case $score < 10:
                 $var = "thumbsDown.png";
                 $sound = "sad.mp3";
