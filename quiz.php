@@ -1,7 +1,6 @@
 <?php 
     session_start();
-        $username = $_POST["name"];
-        $_SESSION['username'] = $username; //name to be used on other pages
+        $_SESSION['username'] = $_POST["name"];
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +17,11 @@
 </head>
 <body>
 
-    <h1 class="mar_pad font_larger blue" id="greeting">Hello <em class="orange"><?php if (isset($_POST["name"])) {echo $_SESSION['username'];} ?></em></h1>
+    <h1 class="mar_pad font_larger blue" id="greeting">Hello <em class="orange"><?php echo $_SESSION['username']; ?></em></h1>
 
     <form method="post" action="result.php">
         <?php  
-        include 'include/array.php'; //my questions array
+        include 'config/array.php'; //my questions array
             $number = 1;
                 foreach ($master as $questionkey => $Options_array) {
                     echo "<fieldset class=\"border mar_pad back_color blue back_colorB rotate \" id=\"$number\">";
@@ -33,7 +32,9 @@
                     echo "</fieldset>";
                     $number++;
                 }
+                
         ?>
+        
 
         <button class="font_larger back_orange border mar_pad white" type="submit"> Submit </button>
     </form>

@@ -68,7 +68,8 @@
 
 <?php 
     if ($score < 10) {
-        echo "<a href=\"quiz.php\"><button class=\"mar_pad back_orange font_larger border white\">Try again</button></a>";
+        echo "<a href=\"quiz.php?username=$name\"><button class=\"mar_pad back_orange font_larger border white\">Try again</button></a>";
+        
     }
 ?>
 
